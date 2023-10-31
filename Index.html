@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desavio Calculadora Stackx</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="container">
+        <!-- CALCULADORA -->
+        <section class="calculadora">
+          <p id="resultado"></p>
+          <table>
+            <tr>
+              <td>
+                <button class="button" onclick="clean()">
+                  <i class="ph ph-eraser" style="font-size: 2.5rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="back()">
+                  <i class="ph ph-skip-back" style="font-size: 2.5rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('/')">
+                  <i class="ph ph-divide" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('*')">
+                  <i class="ph ph-x" style="font-size: 3rem"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="button" onclick="add('7')">
+                  <i class="ph ph-number-seven" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('8')">
+                  <i class="ph ph-number-eight" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('9')">
+                  <i class="ph ph-number-nine" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('-')">
+                  <i class="ph ph-minus" style="font-size: 3rem"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="button" onclick="add('4')">
+                  <i class="ph ph-number-four" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('5')">
+                  <i class="ph ph-number-five" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('6')">
+                  <i class="ph ph-number-six" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('+')">
+                  <i class="ph ph-plus" style="font-size: 3rem"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="button" onclick="add('1')">
+                  <i class="ph ph-number-one" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('2')">
+                  <i class="ph ph-number-two" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td>
+                <button class="button" onclick="add('3')">
+                  <i class="ph ph-number-three" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td rowspan="2">
+                <button
+                  class="button"
+                  style="height: 106px"
+                  onclick="calculation()"
+                >
+                  <i class="ph ph-equals" style="font-size: 3rem"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button class="button personalizado" onclick="add('0')">
+                  <i class="ph ph-number-zero" style="font-size: 3rem"></i>
+                </button>
+              </td>
+              <td><button class="button" onclick="add('.')">.</button></td>
+            </tr>
+          </table>
+        </section>
+
+        <!-- HISTORICO DE TABELAS -->
+        <section class="table-history">
+          <h1>Histórico</h1>
+          <table>
+            <tr class="line" onclick="loadHistory(1)">
+              <td>
+                <input class="input-style" disabled type="text" id="history-1" />
+              </td>
+              <td>
+                <input
+                  class="input-style"
+                  disabled
+                  type="text"
+                  id="calculation-1"
+                />
+              </td>
+            </tr>
+            <tr class="line" onclick="loadHistory(2)">
+              <td>
+                <input class="input-style" disabled type="text" id="history-2" />
+              </td>
+              <td>
+                <input
+                  class="input-style"
+                  disabled
+                  type="text"
+                  id="calculation-2"
+                />
+              </td>
+            </tr>
+            <tr class="line" onclick="loadHistory(3)">
+              <td>
+                <input class="input-style" disabled type="text" id="history-3" />
+              </td>
+              <td>
+                <input
+                  class="input-style"
+                  disabled
+                  type="text"
+                  id="calculation-3"
+                />
+              </td>
+            </tr>
+            <tr class="line" onclick="loadHistory(3)">
+              <td>
+                <input class="input-style" disabled type="text" id="history-4" />
+              </td>
+              <td>
+                <input
+                  class="input-style"
+                  disabled
+                  type="text"
+                  id="calculation-4"
+                />
+              </td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>

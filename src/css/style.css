@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Calculator";
+  src: url("../fonts/Calculator.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+h1 {
+  color: black;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+.calculadora {
+  background-color: #5624ba;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0.3rem;
+  background-color: #5d7a60;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: black;
+}
+.personalizado {
+  width: 10.6rem;
+}
+#resultado {
+  width: 96%;
+  height: 4rem;
+  font-family: "Calculator";
+  font-size: 3.5rem;
+  color: black;
+  text-align: right;
+  background-color: white;
+  margin: 0.5rem;
+  padding: 0 1rem;
+}
+/* =================== history ========================= */
+.line {
+  width: auto;
+  height: auto;
+
+}
+
+.line .input-style {
+  padding: 1rem;
+  border: 0.1rem solid #7a977d;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  color: #555;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+input:first-child {
+  margin-right: 1rem;
+}
+
+
+/* Estilos para a calculadora */
+.calculator {
+  float: left;
+  margin-right: 20px;
+}
+.calculator input {
+  width: 55%;
+  padding: 10px;
+  display: flex;
+  margin-bottom: 10px;
+}
+.calculator button {
+  width: 15%;
+  padding: 10px;
+  font-size: 18px;
+}
+.painel {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* Estilos base */
+.history {
+  float: left;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border: none;
+}
+
+.history h2 {
+  text-align: center;
+  border: none;
+}
+
+.history table {
+  border-collapse: collapse;
+  width: 100%; 
+  border: none;
+}
+
+.history th,
+.history td {
+  border: 0.2px solid #ccc;
+  padding: 5px; 
+  text-align: center;
+  white-space: nowrap; 
+  max-width: 50px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+
+
+
+/* Estilos CSS para o layout de duas colunas */
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.calculadora {
+  flex: 1; 
+  margin-right: 50px; 
+}
+.table-history {
+  flex: 4; 
+}
+
+
+/* Estilos para tornar o layout responsivo */
+@media (max-width: 768px) {
+  .table-history {
+    float: none; 
+    margin: 10px auto; 
+    width: 80%; 
+  }
+
+  .container {
+    float: none; 
+    margin: 10px auto; 
+    width: 80%;
+  }
+
+  .calculadora {
+    float: none;
+    margin: 10px auto;
+    width: 80%; 
+  }
+
+
+
+  
+}
